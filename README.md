@@ -1,7 +1,7 @@
 # yaoxinPDF
 
-TODO:
--[ ] Test on Mac OS
+TODO:   
+- [ ] Test on Mac OS
 http://pynput.readthedocs.io/en/latest/limitations.html#mac-osx
 
 ### 复制英文PDF文件中的文字时，自动将回车变为空格的 Python 程序。
