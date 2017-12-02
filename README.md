@@ -47,3 +47,16 @@ Sometimes formatting is not thorough, using reload() and double funtion use to t
 
 ### 在 深度 15.5 & 福昕PDF阅读器上测试通过。
 ### Tested and works at Deepin 15.5 & Foxit Reader.
+
+## 历史
+## History
+Sat, 02 Dec 2017 18:30:30 GMT+8  
+Sat, 02 Dec 2017 10:30:30 GMT  
+新增 time.sleep(0.1) 延时执行  
+Added time.sleep(0.1) for delay execution  
+
+
+Sat, 02 Dec 2017 17:44:08 GMT+8  
+Sat, 02 Dec 2017 09:44:08 GMT  
+第一版  
+Original commit.
