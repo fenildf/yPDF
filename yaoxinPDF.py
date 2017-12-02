@@ -10,7 +10,7 @@
 
 
 
-import pyperclip, datetime, pynput
+import pyperclip, datetime, pynput, time
 from importlib import reload
 
 def yaoxinPDF():
@@ -56,16 +56,20 @@ def on_press(key):
 		current.add(key)
 		if all(k in current for k in COMBINATION1):
 			reload(pyperclip)
+			time.sleep(0.1)
 			yaoxinPDF()
 			reload(pyperclip)
+			time.sleep(0.1)
 			yaoxinPDF()
 			print('Saved to clipboard already! ' 'text lenth: ' + str(len(Newtext)) + '. ' + datetime.datetime.now().strftime('%Y.%m.%d-%H:%M:%S'))
 	elif key in COMBINATION2:
 		current.add(key)
 		if all(k in current for k in COMBINATION2):
 			reload(pyperclip)
+			time.sleep(0.1)
 			yaoxinPDF()
 			reload(pyperclip)
+			time.sleep(0.1)
 			yaoxinPDF()
 			print('Saved to clipboard already! ' 'text lenth: ' + str(len(Newtext)) + '. ' + datetime.datetime.now().strftime('%Y.%m.%d-%H:%M:%S'))
 	if key == pynput.keyboard.Key.esc:
