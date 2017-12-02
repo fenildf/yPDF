@@ -57,6 +57,6 @@ Added time.sleep(0.1) for delay execution
 
 
 Sat, 02 Dec 2017 17:44:08 GMT+8  
-Sat, 02 Dec 2017 09:44:08 GMT  
+Sat, 02 Dec 2017 09:44:08 GMT  
 第一版  
-Original commit.
+Original commit
