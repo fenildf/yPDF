@@ -48,6 +48,8 @@ Press Esc in the Terminal
 Cannot divide paragraphs while coping mulitiple paragraphs.  
 2.某些情况下格式化不完全，现用reload()和执行两遍函数暂行解决。  
 Sometimes formatting is not thorough, using reload() and double funtion use to temporarily solve.
+3.无法粘贴斜体等格式。
+Cannot copy format such as *italic*.
 
 ### 在 深度 15.5 & 福昕PDF阅读器上测试通过。
 ### Tested and works at Deepin 15.5 & Foxit Reader.
