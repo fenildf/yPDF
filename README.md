@@ -3,6 +3,10 @@
 TODO:   
 - [ ] Test on Mac OS
 http://pynput.readthedocs.io/en/latest/limitations.html#mac-osx
+- [ ] Test on Windows XP sp3
+- [ ] Test on Windows 7 sp1
+- [ ] Test on Windows 8.1
+- [ ] Test on Windows 10
 
 ### 复制英文PDF文件中的文字时，自动将回车变为空格的 Python 程序。
 ### A Python application which replaces line feeds into spaces while coping in English literature.
@@ -56,13 +60,7 @@ Cannot copy format such as *italic*.
 
 ## 历史
 ## History
-Sat, 02 Dec 2017 18:30:30 GMT+8  
-Sat, 02 Dec 2017 10:30:30 GMT  
-新增 time.sleep(0.1) 延时执行  
-Added time.sleep(0.1) for delay execution  
-
-
-Sat, 02 Dec 2017 17:44:08 GMT+8  
-Sat, 02 Dec 2017 09:44:08 GMT  
-第一版  
-Original commit
+|Time|说明|Note|
+|---|---|---|
+|Sat, 02 Dec 2017 18:30:30 GMT+8<br>Sat, 02 Dec 2017 10:30:30 GMT|新增 time.sleep(0.1) 延时执行|Added time.sleep(0.1) for delay execution|  
+|Sat, 02 Dec 2017 17:44:08 GMT+8<br>Sat, 02 Dec 2017 09:44:08 GMT|初始版本|Initial commit|
