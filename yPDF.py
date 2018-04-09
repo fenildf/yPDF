@@ -1,33 +1,33 @@
 #! python3
 
-# yaoxinPDF.py - Replace line feeds with spaces of text on the clipboard.
+# yPDF.py - Replace line feeds with spaces of text on the clipboard.
 # Make pdf easy to use.
 
 # sudo pip3 install pynput pyperclip
 # first
 
-# python<version> yaoxinPDF.py
+# python<version> yPDF.py
 
 
 
 import pyperclip, datetime, pynput, time
 from importlib import reload
 
-def yaoxinPDF():
+def yPDF():
 
 
 	text = pyperclip.paste()
 
 
 
-	file = open('yaoxinPDF.txt', 'w')
+	file = open('yPDF.txt', 'w')
 	file.write(str(text))
 
 	file.close()
 
 
 
-	theFile = open('yaoxinPDF.txt', 'r')
+	theFile = open('yPDF.txt', 'r')
 	pyperclip.copy(theFile.read())
 	fileForUse = pyperclip.paste()
 
@@ -57,20 +57,20 @@ def on_press(key):
 		if all(k in current for k in COMBINATION1):
 			reload(pyperclip)
 			time.sleep(0.1)
-			yaoxinPDF()
+			yPDF()
 			reload(pyperclip)
 			time.sleep(0.1)
-			yaoxinPDF()
+			yPDF()
 			print('Saved to clipboard already! ' 'text lenth: ' + str(len(Newtext)) + '. ' + datetime.datetime.now().strftime('%Y.%m.%d-%H:%M:%S'))
 	elif key in COMBINATION2:
 		current.add(key)
 		if all(k in current for k in COMBINATION2):
 			reload(pyperclip)
 			time.sleep(0.1)
-			yaoxinPDF()
+			yPDF()
 			reload(pyperclip)
 			time.sleep(0.1)
-			yaoxinPDF()
+			yPDF()
 			print('Saved to clipboard already! ' 'text lenth: ' + str(len(Newtext)) + '. ' + datetime.datetime.now().strftime('%Y.%m.%d-%H:%M:%S'))
 	if key == pynput.keyboard.Key.esc:
 		listener.stop()
