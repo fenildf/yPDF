@@ -1,6 +1,6 @@
-import pyperclip
+import pyperclip, time
 
-fo = open('yPDF.txt', 'w', encoding='UTF-8')
+fo = open('%s.txt' % time.time(), 'w', encoding='UTF-8')
 fo.write(str(pyperclip.paste()))
 fo.close()
 
