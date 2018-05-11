@@ -1,17 +1,19 @@
 #! python3
 # -*- coding: UTF-8 –*-
 
+import os, pyperclip, time, datetime, re, shutil
 
-import os, pyperclip, time, datetime, re
+EN_SPACE = ' '
+
 
 if not os.path.isdir('yPDF_cache'):
     os.mkdir('yPDF_cache')
-randomFilename = 'yPDF_cache\\' + str(time.time()) + '.txt'
-fo = open(randomFilename, 'w', encoding='UTF-8')
+cacheFilename = 'yPDF_cache\\' + str(time.time()) + '.txt'
+fo = open(cacheFilename, 'w', encoding='UTF-8')
 fo.write(str(pyperclip.paste()))
 fo.close()
 
-fo = open(randomFilename, 'r', encoding='UTF-8')
+fo = open(cacheFilename, 'r', encoding='UTF-8')
 text = fo.read()
 fo.close()
 
@@ -26,7 +28,7 @@ Re_twoOrMoreSpaces = re.compile(r'''(
 ([\s^\t\n]){2,} # two or more spaces
 )''', re.VERBOSE)
 
-text = Re_twoOrMoreSpaces.sub(' ', text)
+text = Re_twoOrMoreSpaces.sub('%s' % EN_SPACE, text)
 
 
 
@@ -72,4 +74,7 @@ pyperclip.copy(text)
 
 # Print Related Information for this run.
 timeThisMoment = datetime.datetime.now().strftime('%Y.%m.%d-%H:%M:%S')
-print('Saved to clipboard already! Text lenth: ' + str(len(text)) + '. ' + 'Current time: ' + timeThisMoment + '. ')
+print('Saved to clipboard already! Text lenth: ' + str(len(text)) + '. ' + 'Current time: ' + timeThisMoment + '. \na gaoyaoxin app')
+
+# Delete cache directory and cache files in it.
+shutil.rmtree('yPDF_cache')
